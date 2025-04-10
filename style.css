@@ -1,10 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
+    overflow: hidden;   
 }
 body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     background-color: black;
     color: #e7e7e7;
     min-height: 100vh;
@@ -23,7 +24,7 @@ body{
     position: absolute;
     top: 20%;
     right: 0;
-    box-shadow: 0 0 800px 20px white;
+    box-shadow: 0 0 800px 25px white;
     rotate: -30deg;
     z-index: -1;
 }
@@ -50,7 +51,7 @@ header h1{
 nav{
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
     margin-left: -5%;
 }
 nav a{
@@ -59,26 +60,60 @@ nav a{
     transition: color 0.3s ease;
     text-decoration: none;
     color: inherit;
+    font-size: 20px;
     z-index: 999;
 }
 nav a:hover{
-    opacity: .6;
+    color: #75D5FF;
 }
-.sign-in{
-    background-color: #a7a7a7;
-    columns: black;
-    padding: 0.8rem 2rem;
-    border-radius: 20px;
+.Btn {
     border: none;
-    font-size: 1rem;
-    font-weight: 500px;
-    transition: background-color 0.2s ease;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(45deg, #1f1f1f 0%, #2c2c2c 50%, #3a3a3a 100%);    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .insta-icon {
+    font-size: 1.3em;
+    color: white;
+    transition: 0.3s;
     cursor: pointer;
     z-index: 999;
-}
-.sign-in:hover{
-    background-color: white;
-}
+  }
+  
+  .text {
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    opacity: 0;
+    width: 120px;
+    text-align: center;
+    transition: 0.4s;
+    z-index: 999;
+  }
+  
+  .Btn:hover {
+    width: 110px;
+    border-radius: 30px;
+     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+  }
+  
+  .Btn:hover .insta-icon {
+    opacity: 0;
+  }
+  
 
 /* Main Content */
 main{
@@ -151,10 +186,11 @@ main{
 }
 .get-started:hover{
     background-color: rgb(26, 24, 24);
+    color: white;
 }
 .sigin-main{
     text-decoration: none;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
     color: black;
     padding: .6rem 2.5rem;
     border-radius: 50px;
@@ -162,9 +198,12 @@ main{
     font-weight: 600;
     letter-spacing: .1rem;
     transition: background-color 0.2s ease;
+    cursor: pointer;
+    z-index: 999;
 }
 .sigin-main:hover{
-    background-color: gray;
+    background-color: rgb(111, 113, 113);
+    
 }
 
 /* robot */
@@ -192,7 +231,7 @@ main{
     }
     .robot-3d{
         scale: .5;
-        top: -20;
+        top: -90px;
         right: 0;
     }
     .content{
