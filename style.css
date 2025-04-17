@@ -11,6 +11,9 @@ body{
     min-height: 100vh;
     line-height: 1.5;
 }
+.logo{
+    z-index: 999;
+}
 .img-gradient{
     position: absolute;
     top: 0;
@@ -66,6 +69,14 @@ nav a{
 nav a:hover{
     color: #75D5FF;
 }
+
+.socials {
+    display: flex;
+    gap: 0.5rem; /* Adjust this value to bring icons closer or spread them out */
+    align-items: center;
+  }
+  
+
 .Btn {
     border: none;
     border-radius: 50%;
@@ -77,11 +88,12 @@ nav a:hover{
     transition: 0.4s;
     cursor: pointer;
     position: relative;
-    background: linear-gradient(45deg, #1f1f1f 0%, #2c2c2c 50%, #3a3a3a 100%);    text-decoration: none;
+    text-decoration: none;
     overflow: hidden;
+    background: linear-gradient(45deg, #1f1f1f 0%, #2c2c2c 50%, #3a3a3a 100%);
   }
   
-  .insta-icon {
+  .social-icon {
     font-size: 1.3em;
     color: white;
     transition: 0.3s;
@@ -100,19 +112,36 @@ nav a:hover{
     z-index: 999;
   }
   
+  /* Hover effect shared */
   .Btn:hover {
     width: 110px;
     border-radius: 30px;
-     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
   }
   
   .Btn:hover .text {
     opacity: 1;
   }
   
-  .Btn:hover .insta-icon {
+  .Btn:hover .social-icon {
     opacity: 0;
   }
+  
+  /*hover backgrounds */
+  .insta:hover {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  }
+  
+  .snap:hover {
+    background: linear-gradient(45deg, #fffc00 0%, #ffeb3b 50%, #f1c40f 100%);
+  }
+  .snap:hover .text {
+    color: black;
+  }
+  .linkedin:hover {
+    background: linear-gradient(45deg, #0077b5 0%, #0077b5 50%, #005582 100%);
+  }
+
+  
   
 
 /* Main Content */
@@ -135,7 +164,7 @@ main{
     border-radius: 50px;
     background: linear-gradient(to right,  #75D5FF, #2594F4);
     background-size: 200%;
-    animation: animate 2.5s linear infinite;
+    animation: animate 2.5s ease-in-out infinite reverse;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
  }
  @keyframes animate{
