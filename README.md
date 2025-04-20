@@ -1,3 +1,5 @@
+The website https://praveenparshiva.github.io/3D_Model/ is a portfolio website showcasing a 3D model created using Spline. Here are its key features:
+
 🔧 Core Functionality
 3D Model Display:
 
